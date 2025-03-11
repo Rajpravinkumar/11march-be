@@ -16,12 +16,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-const corsOptions = {
+/* const corsOptions = {
   origin: "http://localhost:1573",
   credentials: true,
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); */
+app.use(cors())
 
 const PORT = process.env.PORT || 3000;
 
